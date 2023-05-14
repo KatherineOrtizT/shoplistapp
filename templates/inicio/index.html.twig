@@ -1,0 +1,148 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello InicioController!{% endblock %}
+
+{% block body %}
+{# <style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style> #}
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark navbar-transparent fixed-top" id="navbar">
+  <div class="container">
+    <a class="navbar-brand" href="#">Mi lista de la compra</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sobre nosotros</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+    <div class="jumbotron">
+        <h1 class="display-4">Mi lista de la compra</h1>
+        <p class="lead">Haz tus compras más eficientes con nuestra aplicación</p>
+    </div>
+    <section class="circulos-section">
+        <div class="text-center ">
+        <div class="row justify-content-center">
+            <div class="col-md-2">
+            <div class="circle">
+                <a href="https://pagina1.com"></a>
+                <h6>Página 1</h6>
+            </div>
+            </div>
+            <div class="col-md-2">
+            <div class="circle">
+                <a href="https://pagina2.com"></a>
+                <h6>Página 2</h6>
+            </div>
+            </div>
+            <div class="col-md-2">
+            <div class="circle">
+                <a href="https://pagina3.com"></a>
+                <h6>Página 3</h6>
+            </div>
+            </div>
+            <div class="col-md-2">
+            <div class="circle">
+                <a href="https://pagina4.com"></a>
+                <h6>Página 4</h6>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+    <section class="cuerpo">
+
+        <div class="container mt-5">
+        <hr>
+            <div class="row mt-5">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                <div class="card-body">
+                    <div class="form-group">
+                    <label for="texto">Texto:</label>
+                    <textarea class="form-control" id="texto" rows="3"></textarea>
+                    </div>
+                    <div class="d-grid gap-2">
+                    <button class="btn btn-primary" id="guardar">Guardar</button>
+                    <button class="btn btn-secondary" id="editar">Editar</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Bebidas</h5>
+                    <ul class="list-group">
+                    <li class="list-group-item">Agua</li>
+                    <li class="list-group-item">Refresco</li>
+                    <li class="list-group-item">Cerveza</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+                    
+        </section>
+    {# Footer #}
+    <footer style="background-color: #161D6F;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="/imagenes/logo.png" alt="Logo">
+        <p>1234 Calle Principal<br>Ciudad, País</p>
+        <p>Teléfono: +123 456 789<br>Correo electrónico: contacto@ejemplo.com</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Síguenos en las redes sociales</h5>
+        <div class="social-icons">
+          <a href="#"><img src="/imagenes/insta.png" alt="Instagram"></a>
+          <a href="#"><img src="/imagenes/face.png" alt="Facebook"></a>
+          <a href="#"><img src="/imagenes/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="/imagenes/tiktok.png" alt="TikTok"></a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h5>Contacto</h5>
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Nombre">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Correo electrónico">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" rows="3" placeholder="Mensaje"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </div>
+    <hr>
+    <p class="text-center">Todos los derechos reservados © 2023</p>
+  </div>
+</footer>
+
+
+{% endblock %}

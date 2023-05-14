@@ -1,0 +1,135 @@
+/* NAVBAR */
+.navbar {
+    margin-bottom: 20px;
+}
+
+.navbar-custom {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .navbar-nav .nav-link {
+    color: #161D6F;
+}
+.navbar {
+    margin-bottom: 20px;
+}
+  
+.navbar-custom {
+    background-color: #161d6f9f;
+}
+  
+/* INICIO CABECERA*/
+.jumbotron {
+    background-image: url(../imagenes/verduras_rosa.jpg);
+    background-size: cover;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 1px 1px black;
+    /* box-shadow: inset 0 -80px 70px 0px white, inset 0 20px 60px 0px black; */
+}
+.jumbotron {
+    position: relative;
+}
+
+.jumbotron::before, .jumbotron::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 150px;
+}
+
+.jumbotron::before {
+    top: 0;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(0,0,0,0));
+}
+
+.circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4), 0 0 4px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    background-image: url(../imagenes/1_3.png);
+    background-size: 100%;
+}
+.circle:hover {
+    transform: scale(1.1);
+    background-image: url(../imagenes/2_4.png);
+}
+.circle h6 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #161D6F;
+}
+.circulos-section {
+    height: 200px; /* Ajusta la altura según sea necesario */
+    margin-top: 100px; /* Establece la separación superior que deseas */
+    width: 100%;
+}
+
+
+.cuerpo{
+    height: 700px;
+}
+.card{
+    border-radius: 25px;
+}
+
+/* productos  */
+
+
+
+
+  /* footer */
+footer {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    color: white;
+    width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+form {
+    margin-top: 20px;
+}
+
+form input,
+form textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+    color: white;
+}
+form input::placeholder,
+form textarea::placeholder {
+    color: white;
+}
+
+form button {
+    margin-top: 10px;
+}
+  
