@@ -36,6 +36,7 @@ class Listas
     public function __construct()
     {
         $this->productosListas = new ArrayCollection();
+        $this->fecha_de_creacion=new \DateTime();
     }
 
     public function getId(): ?int

@@ -1,0 +1,9 @@
+<div class="registration-form">
+    
+{{ form_start(form) }} 
+     {{ form_row(form.email, {'label': 'Email\n'}) }}
+    {{ form_widget(form) }}
+    <button class="btn">{{ button_label|default('Registro') }}</button>
+{{ form_end(form) }}
+
+</div>

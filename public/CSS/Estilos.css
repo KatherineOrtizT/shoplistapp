@@ -89,8 +89,63 @@
 
 
 
+/* Registro */
+.registro_form {
+    background-image:url(../imagenes/plastico.jpg);
+    background-position:center;
+    background-size:cover;
+    
+    -webkit-font-smoothing: antialiased;
+    font: normal 14px Roboto,arial,sans-serif;
+    font-family: 'Dancing Script', cursive!important;
+}
 
-  /* footer */
+.registro_form  .container {
+    padding: 110px;
+}
+.registro_form  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ffffff!important;
+    opacity: 1; /* Firefox */
+    font-size:18px!important;
+}
+.registro_form  .form-login {
+    background-color: rgba(0,0,0,0.55);
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border-color:#d2d2d2;
+    border-width: 5px;
+    color:white;
+    box-shadow:0 1px 0 #cfcfcf;
+}
+.registro_form  .form-control{
+    background:transparent!important;
+    color:white!important;
+    font-size: 18px!important;
+}
+.registro_form  h1{
+    color:white!important;
+}
+.registro_form h4 { 
+    border:0 solid #fff; 
+    border-bottom-width:1px;
+    padding-bottom:10px;
+    text-align: center;
+}
+
+.registro_form .form-control {
+    border-radius: 10px;
+}
+.registro_form .text-white{
+    color: white!important;
+}
+.registro_form .wrapper {
+    text-align: center;
+}
+
+/* footer */
 footer {
     padding-top: 50px;
     padding-bottom: 20px;
@@ -122,14 +177,14 @@ form textarea {
     border: none;
     border-bottom: 1px solid white;
     border-radius: 0;
-    color: white;
+    color: gray;
 }
 form input::placeholder,
 form textarea::placeholder {
-    color: white;
+    color: rgb(88, 84, 84);
 }
 
 form button {
     margin-top: 10px;
 }
-  
+

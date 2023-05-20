@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New User{% endblock %}
+
+{% block body %}
+<div class='registro_form'>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-4 text-center">
+            {# <h1 class='text-white'>Create new User</h1> #}
+              <div class="form-login"></br>
+                <h4>App Lista</h4>
+                </br>
+                 <h1>Create new User</h1> 
+                    {{ include('registro/_form.html.twig') }}
+                    <a href="{{ path('app_registro_index') }}">back to list</a>
+                {# <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="username"/>
+                </br></br>
+                <input type="text" id="userPassword" class="form-control input-sm chat-input" placeholder="password"/>
+                </br></br>
+                <div class="wrapper">
+                        <span class="group-btn">
+                            <a href="#" class="btn btn-danger btn-md">login <i class="fa fa-sign-in"></i></a>
+                        </span>
+                </div> #}
+            </div>
+        </div>
+    </div>
+    </br></br></br>
+ 
+</div>
+</div>
+
+   
+{% endblock %}
