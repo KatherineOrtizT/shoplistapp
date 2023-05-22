@@ -29,7 +29,7 @@ class Listas
     #[ORM\OneToMany(mappedBy: 'id_lista', targetEntity: ProductosLista::class)]
     private Collection $productosListas;
 
-    #[ORM\ManyToOne(inversedBy: 'listas')]
+    #[ORM\ManyToOne(inversedBy: 'Listas')]
     #[ORM\JoinColumn(nullable: false)]
     private ?user $id_user = null;
 

@@ -4,31 +4,46 @@
 
 {% block body %}
 
+
     <div class="container">
-    <h1 class="mb-5">Productos index</h1>
-    
-        <div class="row">
-            {% for producto in productos %}
-                <div class="col-sm-3">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ producto.nombre }}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">{{ producto.Supermercado }}</h6>
-                        <img src="{{ asset(producto.Imagen_url) }}" alt="Imagen de {{ producto.nombre }}" style="max-width: 100%; height: 200px; object-fit: cover;">
-                        <p class="card-text">{{ producto.descripcion }}</p>
-                        <ul class="list-group list-group-flush">
-                        <li class="list-group-item">{{ producto.precioA }} € {{ producto.formato }}</li>
-                        {# <li class="list-group-item"></li> #}
-                        <li class="list-group-item">{{ producto.marca }} </li>
-                        </ul>
-                    </div></div>
+        <h1 class="mb-5">Productos index</h1>
+        <form action="{{ path('app_productos_buscar') }}" method="GET" class="mb-4">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Buscar productos">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">Buscar</button>
                 </div>
-            {% else %}
-                <h1 colspan="10">no records found</h1>
-            {% endfor %}
-        </div>
+            </div>
+        </form>
+        
+            <div class="row">
+                {% for producto in productos %}
+                    <div class="col-sm-3">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ producto.nombre }}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">{{ producto.Supermercado }}</h6>
+                                <img src="{{ asset(producto.Imagen_url) }}" alt="Imagen de {{ producto.nombre }}" style="max-width: 100%; height: 200px; object-fit: cover;">
+                                <p class="card-text">{{ producto.descripcion }}</p>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">{{ producto.precioA }} € {{ producto.formato }}</li>
+                                    <li class="list-group-item">{{ producto.marca }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <h1 colspan="10">no records found</h1>
+                {% endfor %}
+            </div>
+                
+                <div class="pagination">
+                    {{ knp_pagination_render(productos) }}
+                </div>
+        
     </div>
 
-        
+<a href="{{ path('app_productos_new') }}">Create new</a>
+
     <a href="{{ path('app_productos_new') }}">Create new</a>
 {% endblock %}

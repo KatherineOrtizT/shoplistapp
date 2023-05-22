@@ -13,6 +13,38 @@
             
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
+            {# <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                    // Escucha el evento de envío del formulario de búsqueda
+                    $('#search-form').submit(function(event) {
+                        event.preventDefault(); // Evita el envío del formulario por defecto
+
+                        // Obtiene el término de búsqueda del formulario
+                        var query = $('#search-input').val();
+
+                        // Realiza la solicitud Ajax
+                        $.ajax({
+                            url: '{{ path('app_productos_buscar') }}',
+                            method: 'GET',
+                            data: { q: query },
+                            beforeSend: function() {
+                                // Muestra un indicador de carga o mensaje de espera
+                                $('#ajax-results').html('Cargando resultados...');
+                            },
+                            success: function(response) {
+                                // Actualiza el contenido del contenedor con los resultados
+                                $('#ajax-results').html(response);
+                            },
+                            error: function() {
+                                // Muestra un mensaje de error en caso de fallo en la solicitud
+                                $('#ajax-results').html('Error al cargar los resultados');
+                            }
+                        });
+                    });
+                });
+            </script> #}
+
         {% endblock %}
     </head>
     <body>

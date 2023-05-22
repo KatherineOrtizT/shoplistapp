@@ -29,6 +29,15 @@ class ProductosRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
+    
+    public function buscarPorNombre($query)
+    {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.nombre LIKE :query')
+            ->setParameter('query', '%'.$query.'%')
+            ->getQuery()
+            ->getResult();
+    }
 
     public function remove(Productos $entity, bool $flush = false): void
     {
